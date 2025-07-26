@@ -1,6 +1,3 @@
-Of course. Here is the complete content for your README.md file. Just copy and paste this raw text into a file named README.md in your project's root directory.
-
-Generated md
 # PaySim Integration Demo Store
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
@@ -54,66 +51,31 @@ Follow these steps to get the project running on your local machine.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/abenezer-a/paysim_integration_example.git
+cd paysim_integration_example
 
 Step 2: Install Dependencies
-Generated bash
 npm install
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+
 Step 3: Create Your Environment File
 
-Create a .env file in the root of the project. You can copy the example file to get started.
+Edit .env file in the root of the project.
 
-Generated bash
-# For Mac/Linux
-cp .env.example .env
-
-# For Windows
-copy .env.example .env
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-
-Now, open the newly created .env file and fill in the following values from your PaySim dashboard:
-
-Generated dotenv
 # .env
 
 # Get this from your PaySim Project Dashboard
 PAYSIM_API_KEY=ps_test_xxxxxxxxxxxxxxxxxxxxxxxx
 # Create a webhook endpoint in the dashboard to get this secret
 PAYSIM_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxxxxxxxxxxxxxxx
-
 # This will be filled in the next step
 PUBLIC_SERVER_URL=
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Dotenv
-IGNORE_WHEN_COPYING_END
+
 Step 4: Start Ngrok
 
 Because the PaySim server on the internet needs to send webhooks to your machine, you must expose your local server. Open a new terminal window and run the following command.
 
-Generated bash
 # This points ngrok to port 3000, where our app will run
 ngrok http 3000
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
 
 Ngrok will provide you with a public "Forwarding" URL. Copy the https URL. It will look something like https://<random-string>.ngrok-free.app.
 
@@ -121,15 +83,8 @@ Step 5: Update Environment File with Ngrok URL
 
 Go back to your .env file and paste the https ngrok URL into the PUBLIC_SERVER_URL variable.
 
-Generated dotenv
-# .env (updated)
 PUBLIC_SERVER_URL=https://<random-string>.ngrok-free.app
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Dotenv
-IGNORE_WHEN_COPYING_END
+
 Step 6: Configure the Webhook in PaySim
 
 Go to your PaySim project dashboard.
@@ -150,32 +105,14 @@ Step 7: Run the Server
 
 You're all set! Go back to your first terminal window (in the project directory) and start the server.
 
-Generated bash
 node server.js
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
 
 You should see the following output, confirming the server is running and using your public URL:
 
-Generated code
 [Store Server] Online store is running at http://localhost:3000
 [Store Server] Public URL for PaySim: https://<random-string>.ngrok-free.app
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-IGNORE_WHEN_COPYING_END
+
 Step 8: Test the Flow!
 
 Open your web browser and navigate to http://localhost:3000. You can now test the complete payment flow! Watch both the store server terminal and the ngrok terminal for live requests.
 
-Generated code
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-IGNORE_WHEN_COPYING_END
