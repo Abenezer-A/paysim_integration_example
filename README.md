@@ -131,10 +131,10 @@ Expected output:
 
 ### 8. Test the Payment Flow!
 
-Visit [http://localhost:3000](http://localhost:3000) in your browser. Walk through the store and test a complete transaction. Watch the server terminal and ngrok logs for real-time feedback.
+Visit [(https://abc123.ngrok-free.app)](https://abc123.ngrok-free.app) in your browser. Walk through the store and test a complete transaction. Watch the server terminal and ngrok logs for real-time feedback.
 
 ---
 
 ## 📄 License
 
-This project is provided for demo and educational purposes only. No warranty or liability implied.
+
