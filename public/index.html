@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Awesome Gadget Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Awesome Gadget Store</h1>
+        </header>
+
+        <main class="store-layout">
+            <section class="products">
+                <h2>Our Products</h2>
+                <div class="product-list">
+                    <div class="product-card" data-id="1" data-name="Cyber-Goggles" data-price="49.99">
+                        <img src="https://placehold.co/300x200/blue/white?text=Cyber-Goggles" alt="Cyber-Goggles">
+                        <h3>Cyber-Goggles</h3>
+                        <p class="price">$49.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-id="2" data-name="Hover-Board" data-price="299.50">
+                        <img src="https://placehold.co/300x200/green/white?text=Hover-Board" alt="Hover-Board">
+                        <h3>Hover-Board</h3>
+                        <p class="price">$299.50</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="cart">
+                <h2>Your Cart</h2>
+                <div id="cart-items"><p>Your cart is empty.</p></div>
+                <div class="cart-summary">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button id="checkout-button" disabled>Checkout with PaySim</button>
+                <div id="error-message" class="error"></div>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
